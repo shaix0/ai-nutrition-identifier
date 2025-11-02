@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "749493468449",
+    "project_id": "ai-nutrition-identifier",
+    "storage_bucket": "ai-nutrition-identifier.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749493468449:android:e46dd595d0a15175c1d260",
+        "android_client_info": {
+          "package_name": "com.example.ai_nutrition_identifier"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHJhsiWDav4b1QPHy9zC9oP2x6p8qwPg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
