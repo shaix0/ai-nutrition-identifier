@@ -38,7 +38,7 @@ class _AuthTestPageState extends State<AuthTestPage> {
         child: Column(
           children: [
             TextField(controller: emailController, decoration: InputDecoration(labelText: "Email")),
-            TextField(controller: passwordController, decoration: InputDecoration(labelText: "Password")),
+            TextField(controller: passwordController, obscureText: true, decoration: InputDecoration(labelText: "Password")),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: registerAndSendVerification,
