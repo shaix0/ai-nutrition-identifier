@@ -244,10 +244,20 @@ class _RegisterPageState extends State<RegisterPage> {
     setState(() => isLoading = true);
 
     try {
-      final userCredential = await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(email: email, password: password);
+      // 普通註冊
+      //final userCredential = await FirebaseAuth.instance
+      //    .createUserWithEmailAndPassword(email: email, password: password);
 
-      await userCredential.user!.sendEmailVerification();
+      // 匿名轉永久帳號
+      final credential = EmailAuthProvider.credential(
+        email: email,
+        password: password,
+      );
+
+      final userCredential = await FirebaseAuth.instance.currentUser
+      ?.linkWithCredential(credential);
+
+      await userCredential?.user!.sendEmailVerification();
 
       setState(() {
         emailController.clear();
